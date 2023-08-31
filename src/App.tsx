@@ -12,7 +12,7 @@ function App() {
     {
       id: 'task-2',
       content: 'Implement it',
-      status: TaskStatus.InProgress
+      status: TaskStatus.InProgress,
     },
   ]
 
