@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { DragDropContextProps } from 'react-beautiful-dnd'
+import { DragDropContextProps, DragDropContext as VendorDragDropContext } from 'react-beautiful-dnd'
 
 export const DragDropContext: FC<DragDropContextProps> = ({ children, ...props }) => (
-  <DragDropContext {...props}>{children}</DragDropContext>
+  <VendorDragDropContext {...props}>{children}</VendorDragDropContext>
 )
