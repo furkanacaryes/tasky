@@ -26,6 +26,14 @@
       "name": "preview",
       "command": "yarn preview",
       "runAtStart": false
+    },
+    "npm install react-dnd react-dnd-html5-backend": {
+      "name": "npm install react-dnd react-dnd-html5-backend",
+      "command": "npm install react-dnd react-dnd-html5-backend"
+    },
+    "yarn add react-dnd react-dnd-html5-backend": {
+      "name": "yarn add react-dnd react-dnd-html5-backend",
+      "command": "yarn add react-dnd react-dnd-html5-backend"
     }
   }
 }

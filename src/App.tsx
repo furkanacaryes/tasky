@@ -1,12 +1,22 @@
-import "./global-styles.css";
-import { Draggable } from "./lib";
+import { TaskBoard, TaskStatus } from 'src/modules/Task'
+
+import './global-styles.css'
 
 function App() {
-  return (
-    <Draggable>
-      <div style={{backgroundColor: 'blue', width: 32, height: 32 }} />
-    </Draggable>
-  )
+  const tasks = [
+    {
+      id: 'task-1',
+      content: 'Find beautiful dnd lib',
+      status: TaskStatus.Done,
+    },
+    {
+      id: 'task-2',
+      content: 'Implement it',
+      status: TaskStatus.InProgress
+    },
+  ]
+
+  return <TaskBoard tasks={tasks} />
 }
 
-export default App;
+export default App
