@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, DragEventHandler } from "react";
 
 import "./styles.css";
 
@@ -7,12 +7,18 @@ export type DraggableProps = PropsWithChildren & {
 };
 
 export const Draggable: FC<DraggableProps> = ({ children, className = "" }) => {
+  const configurePreview: DragEventHandler<HTMLDivElement> = (event) => {
+    const noPreview = document.createElement('div')
+    noPreview.style.backgroundColor = "red";
+    event.dataTransfer.setDragImage(noPreview, 0, 0);
+  }
+  
   return (
     <div
       draggable
       className={`draggable-container ${className}`}
       onDrag={(e) => e.preventDefault()}
-      // onDragStart={(e) => {e.preventDefault()}}
+      onDragStart={configurePreview}
       onDragEnter={(e) => e.preventDefault()}
       onDragEnd={() => console.log("drag-end")}
       onDragExit={() => console.log("drag-exit")}
