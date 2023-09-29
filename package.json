@@ -1,6 +1,6 @@
 {
-  "name": "sandbox",
-  "private": true,
+  "name": "tasky",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
