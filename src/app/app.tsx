@@ -1,8 +1,8 @@
-import { TaskBoard, TaskStatus } from 'src/modules/Task'
+import { TaskBoard, TaskStatus } from 'src/modules/task'
 
 import './global-styles.css'
 
-function App() {
+export const App = () => {
   const tasks = [
     {
       id: 'task-1',
@@ -18,5 +18,3 @@ function App() {
 
   return <TaskBoard tasks={tasks} />
 }
-
-export default App

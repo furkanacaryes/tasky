@@ -1,9 +1,8 @@
 import { FC } from 'react'
 
-import { Draggable } from 'src/vendor'
-import { Task } from 'src/modules/Task'
+import { Draggable } from 'src/modified-packages'
 
-export type TaskStackItemProps = Task & {
+export type TaskStackItemProps = Task.Item & {
   index: number
 }
 

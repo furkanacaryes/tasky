@@ -1,7 +1,13 @@
-import { TaskStatus } from './TaskStatus'
+import { TaskStatus } from './task-status'
 
-export type Task = {
-  id: string
-  content: string
-  status: TaskStatus
+declare global {
+  namespace Task {
+    export type Item = {
+      id: string
+      content: string
+      status: Status
+    }
+
+    export type Status = TaskStatus
+  }
 }

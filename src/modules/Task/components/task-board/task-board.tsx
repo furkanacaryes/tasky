@@ -1,12 +1,12 @@
 import { FC, useState } from 'react'
 
-import { DragDropContext } from 'src/vendor'
-import { Task, TaskStack } from 'src/modules/Task'
+import { DragDropContext } from 'src/modified-packages'
+import { TaskStack } from 'src/modules/task'
 
 import { createTaskStacksFrom } from './helpers'
 
 export type TaskBoardProps = {
-  tasks: Task[]
+  tasks: Task.Item[]
 }
 
 export const TaskBoard: FC<TaskBoardProps> = ({ tasks: initialTasks }) => {

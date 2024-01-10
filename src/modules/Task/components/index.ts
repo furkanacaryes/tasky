@@ -1,3 +1,3 @@
-export * from './TaskBoard'
-export * from './TaskStack'
-export * from './TaskStackItem'
+export * from './task-board'
+export * from './task-stack'
+export * from './task-stack-item'
