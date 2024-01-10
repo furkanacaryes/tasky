@@ -6,7 +6,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
   ],
   overrides: [
     {
@@ -24,8 +24,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'react-refresh'],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-namespace': 'off',
   },
 }
